@@ -22,13 +22,13 @@ export default function HomePage() {
         if (!response.ok) {
           throw new Error("Failed to fetch users");
         }
-        const data: User[] = await response.json();
+        const data: User[] = (await response.json()) as User[];
         setUsers(data);
       } catch (error) {
         console.error("Error fetching users:", error);
       }
     }
-    fetchUsers();
+    void fetchUsers();
   });
 
   return (
