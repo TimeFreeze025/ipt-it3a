@@ -7,8 +7,8 @@ interface User {
   name: string | null;
   email: string | null;
   address: string | null;
-  createdAt: String;
-  updatedAt: String | null;
+  createdAt: string;
+  updatedAt: string | null;
 }
 
 export default function HomePage() {
